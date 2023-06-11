@@ -1,0 +1,365 @@
+Last login: Sun Jun 11 15:47:51 on ttys000
+(base) beauchapman@Beaus-MBP ~ % cd /Users/beauchapman/Take2 
+(base) beauchapman@Beaus-MBP Take2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   Assets/.DS_Store
+	modified:   Assets/Scenes/SampleScene.unity
+	new file:   Assets/Scripts/GitHubPushButton.cs
+	new file:   Assets/Scripts/GitHubPushButton.cs.meta
+	modified:   Assets/Scripts/UpdateAssets.cs
+	new file:   Assets/TextMesh Pro.meta
+	new file:   Assets/TextMesh Pro/.DS_Store
+	new file:   Assets/TextMesh Pro/Documentation.meta
+	new file:   Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+	new file:   Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+	new file:   Assets/TextMesh Pro/Fonts.meta
+	new file:   Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+	new file:   Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
+	new file:   Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+	new file:   Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+	new file:   Assets/TextMesh Pro/Resources.meta
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials.meta
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+	new file:   Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+	new file:   Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+	new file:   Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+	new file:   Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+	new file:   Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+	new file:   Assets/TextMesh Pro/Resources/Sprite Assets.meta
+	new file:   Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+	new file:   Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta
+	new file:   Assets/TextMesh Pro/Resources/Style Sheets.meta
+	new file:   Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+	new file:   Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+	new file:   Assets/TextMesh Pro/Resources/TMP Settings.asset
+	new file:   Assets/TextMesh Pro/Resources/TMP Settings.asset.meta
+	new file:   Assets/TextMesh Pro/Shaders.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+	new file:   Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMPro.cginc
+	new file:   Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+	new file:   Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta
+	new file:   Assets/TextMesh Pro/Sprites.meta
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne.json
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne.png
+	new file:   Assets/TextMesh Pro/Sprites/EmojiOne.png.meta
+	modified:   Packages/manifest.json
+	modified:   Packages/packages-lock.json
+
+(base) beauchapman@Beaus-MBP Take2 % git commit "commit 2"
+error: pathspec 'commit 2' did not match any file(s) known to git
+(base) beauchapman@Beaus-MBP Take2 % git commit -am "second commit"
+[main 13ce8fc] second commit
+ Committer: Beau Chapman <beauchapman@Beaus-MBP.lan>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 82 files changed, 13735 insertions(+), 23 deletions(-)
+ create mode 100644 Assets/Scripts/GitHubPushButton.cs
+ create mode 100644 Assets/Scripts/GitHubPushButton.cs.meta
+ create mode 100755 Assets/TextMesh Pro.meta
+ create mode 100644 Assets/TextMesh Pro/.DS_Store
+ create mode 100755 Assets/TextMesh Pro/Documentation.meta
+ create mode 100755 Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+ create mode 100755 Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+ create mode 100755 Assets/TextMesh Pro/Fonts.meta
+ create mode 100755 Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+ create mode 100755 Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
+ create mode 100755 Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+ create mode 100755 Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+ create mode 100755 Assets/TextMesh Pro/Resources.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+ create mode 100755 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+ create mode 100755 Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+ create mode 100755 Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Sprite Assets.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+ create mode 100755 Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Style Sheets.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+ create mode 100755 Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+ create mode 100755 Assets/TextMesh Pro/Resources/TMP Settings.asset
+ create mode 100755 Assets/TextMesh Pro/Resources/TMP Settings.asset.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro.cginc
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+ create mode 100755 Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta
+ create mode 100755 Assets/TextMesh Pro/Sprites.meta
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne.json
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne.png
+ create mode 100755 Assets/TextMesh Pro/Sprites/EmojiOne.png.meta
+(base) beauchapman@Beaus-MBP Take2 % git push -u origin main
+Enumerating objects: 108, done.
+Counting objects: 100% (108/108), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (97/97), done.
+Writing objects: 100% (97/97), 1.25 MiB | 421.00 KiB/s, done.
+Total 97 (delta 39), reused 0 (delta 0), pack-reused 0
+^C
+(base) beauchapman@Beaus-MBP Take2 % git push -f "second commit"
+fatal: 'second commit' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(base) beauchapman@Beaus-MBP Take2 % git pull
+Already up to date.
+(base) beauchapman@Beaus-MBP Take2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) beauchapman@Beaus-MBP Take2 % git push -u 
+Enumerating objects: 108, done.
+Counting objects: 100% (108/108), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (97/97), done.
+Writing objects: 100% (97/97), 1.25 MiB | 443.00 KiB/s, done.
+Total 97 (delta 39), reused 0 (delta 0), pack-reused 0
+^C
+(base) beauchapman@Beaus-MBP Take2 % git commit -A
+error: unknown switch `A'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+(base) beauchapman@Beaus-MBP Take2 % git commit -a
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) beauchapman@Beaus-MBP Take2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) beauchapman@Beaus-MBP Take2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Assets/NewUnlitShader.shader
+	Assets/NewUnlitShader.shader.meta
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) beauchapman@Beaus-MBP Take2 % git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+(base) beauchapman@Beaus-MBP Take2 % git add .
+(base) beauchapman@Beaus-MBP Take2 % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+(base) beauchapman@Beaus-MBP Take2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Assets/NewUnlitShader.shader
+	new file:   Assets/NewUnlitShader.shader.meta
+
+(base) beauchapman@Beaus-MBP Take2 % git commit -a
+hint: Waiting for your editor to close the file... 
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Beau Chapman <beauchapman@Beaus-MBP.lan>
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#       new file:   Assets/NewUnlitShader.shader
+#       new file:   Assets/NewUnlitShader.shader.meta
+#
+this is the second commit
+
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+
