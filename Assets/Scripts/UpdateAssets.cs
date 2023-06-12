@@ -38,6 +38,24 @@ public class UpdateAssets : MonoBehaviour
             if (commitProcess.ExitCode == 0)
             {
                 UnityEngine.Debug.Log("Git commit command executed successfully.");
+
+                ProcessStartInfo pushProcessInfo = new ProcessStartInfo(gitExecutable);
+                pushProcessInfo.WorkingDirectory = repositoryPath;
+                pushProcessInfo.Arguments = "push -u origin main";
+
+                Process pushProcess = new Process();
+                pushProcess.StartInfo = pushProcessInfo;
+                pushProcess.Start();
+                pushProcess.WaitForExit();
+
+                if (pushProcess.ExitCode == 0)
+                {
+                    UnityEngine.Debug.Log("Git push command executed successfully.");
+                }
+                else
+                {
+                    UnityEngine.Debug.LogError("Failed to execute git push command.");
+                }
             }
             else
             {
