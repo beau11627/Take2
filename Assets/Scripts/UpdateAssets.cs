@@ -3,42 +3,51 @@ using System.Diagnostics;
 
 public class UpdateAssets : MonoBehaviour
 {
-    public void Awake()
-    {
-        AddAndPushFiles();
+    //public void Awake()
+    //{
+    //    AddAndPushFiles();
         
-    }
+    //}
     public void AddAndPushFiles()
     {
-        string gitPath = "git"; // Path to the git executable or 'git' if it's in the system PATH
+        string gitExecutable = "git"; //path to the git executable
+        string repositoryPath = "/Users/beauchapman/Take2/"; //path to the gitRepo
 
-        // Add the files to the staging area
-        RunGitCommand(gitPath, "add -A");
+        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        processInfo.WorkingDirectory = repositoryPath;
+        processInfo.Arguments = "add ."; //add all files to the git repository
 
-        // Commit the changes
-        RunGitCommand(gitPath, "commit -m \"Commit message\"");
+        Process addProcess = new Process();
+        addProcess.StartInfo = processInfo;
+        addProcess.Start();
+        addProcess.WaitForExit();
 
-        // Push the changes to the remote repository
-        RunGitCommand(gitPath, "push origin main");
-    }
+        if (addProcess.ExitCode == 0)
+        {
+            UnityEngine.Debug.Log("Git add command executed successfully.");
 
-    private void RunGitCommand(string gitPath, string command)
-    {
-        ProcessStartInfo startInfo = new ProcessStartInfo();
-        startInfo.FileName = gitPath;
-        startInfo.Arguments = command;
-        startInfo.UseShellExecute = false;
-        startInfo.RedirectStandardOutput = true;
-        startInfo.CreateNoWindow = true;
+            ProcessStartInfo commitProcessInfo = new ProcessStartInfo(gitExecutable);
+            commitProcessInfo.WorkingDirectory = repositoryPath;
+            commitProcessInfo.Arguments = "commit -m \"Your commit message\""; // Replace with your commit message
 
-        Process process = new Process();
-        process.StartInfo = startInfo;
-        process.Start();
+            Process commitProcess = new Process();
+            commitProcess.StartInfo = commitProcessInfo;
+            commitProcess.Start();
+            commitProcess.WaitForExit();
 
-        // Read the output of the Git command, if needed
-        string output = process.StandardOutput.ReadToEnd();
-        UnityEngine.Debug.Log(output);
-
-        process.WaitForExit();
+            if (commitProcess.ExitCode == 0)
+            {
+                UnityEngine.Debug.Log("Git commit command executed successfully.");
+            }
+            else
+            {
+                UnityEngine.Debug.LogError("Failed to execute git commit command.");
+            }
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("Failed to execute git add command.");
+        }
     }
 }
+
