@@ -11,7 +11,7 @@ public class CustomEditorButton : Editor
 
         UpdateAssets scriptToDo = (UpdateAssets)target;
 
-        if (GUILayout.Button("Custom Button"))
+        if (GUILayout.Button("Push to GitHub"))
         {
             scriptToDo.AddAndPushAssets();
         }
