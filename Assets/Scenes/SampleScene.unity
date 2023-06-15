@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 519323064}
   - component: {fileID: 519323063}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Push to Git
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1815446443}
         m_TargetAssemblyTypeName: UpdateAssets, Assembly-CSharp
-        m_MethodName: AddAndPushFiles
+        m_MethodName: AddAndPushAssets
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
