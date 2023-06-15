@@ -15,5 +15,10 @@ public class CustomEditorButton : Editor
         {
             scriptToDo.AddAndPushAssets();
         }
+        if (GUILayout.Button("Pull from GitHub"))
+        {
+            scriptToDo.PerformGitPull();
+        }
     }
+
 }

@@ -67,5 +67,28 @@ public class UpdateAssets : MonoBehaviour
                 UnityEngine.Debug.LogError("Failed to execute git add command.");
             }
         }
+    public void PerformGitPull()
+    {
+        string gitExecutable = "git"; // Path to the git executable if not in system PATH
+        string repositoryPath = "/Users/beauchapman/Take2/"; // Path to your Git repository
+
+        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        processInfo.WorkingDirectory = repositoryPath;
+        processInfo.Arguments = "pull";
+
+        Process process = new Process();
+        process.StartInfo = processInfo;
+        process.Start();
+        process.WaitForExit();
+
+        if (process.ExitCode == 0)
+        {
+            UnityEngine.Debug.Log("Git pull operation completed successfully.");
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("Failed to perform Git pull operation.");
+        }
     }
+}
 
