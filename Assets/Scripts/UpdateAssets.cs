@@ -6,10 +6,12 @@ using UnityEditor;
 
 public class UpdateAssets : MonoBehaviour
 {
-    
-    public void AddAndPushAssets()
+    [SerializeField]
+    private string commitComment;
+
+    public void AddAndPushAssets(string commitComment)
     {
-        
+       
             string gitExecutable = "git"; //path to the git executable
             string repositoryPath = "/Users/beauchapman/Take2/"; //path to the gitRepo
 
@@ -28,7 +30,7 @@ public class UpdateAssets : MonoBehaviour
 
                 ProcessStartInfo commitProcessInfo = new ProcessStartInfo(gitExecutable);
                 commitProcessInfo.WorkingDirectory = repositoryPath;
-                commitProcessInfo.Arguments = "commit -m \"Your commit message\""; // Replace with your commit message
+                commitProcessInfo.Arguments = "commit -m \"" + commitComment + "\""; // Replace with your commit message
 
                 Process commitProcess = new Process();
                 commitProcess.StartInfo = commitProcessInfo;
