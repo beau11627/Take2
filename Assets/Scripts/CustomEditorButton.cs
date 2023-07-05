@@ -6,7 +6,7 @@ using UnityEditor;
 public class CustomEditorButton : Editor
 {
     private SerializedProperty textField;
-    
+
     private void OnEnable()
     {
         textField = serializedObject.FindProperty("commitComment"); // Replace with the name of your serialized string field
@@ -21,6 +21,7 @@ public class CustomEditorButton : Editor
         {
             UpdateAssets script = (UpdateAssets)target;
             script.AddAndPushAssets(textField.stringValue);
+         
         }
         if (GUILayout.Button("Pull from GitHub"))
         {
