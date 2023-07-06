@@ -11,8 +11,35 @@ public class UpdateAssets : MonoBehaviour
     //private string repositoryPath = Application.dataPath; //path to the gitRepo
 
     [SerializeField] private string commitComment; //string that will hold our inputted comment
-   
-   
+
+
+
+    
+
+    //General function for calling GitCommands
+    private void ExecuteGitCommand(string command)
+    {
+        string gitExecutable = "git";
+        string repositoryPath = Application.dataPath;
+        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        processInfo.WorkingDirectory = repositoryPath;
+        processInfo.Arguments = command;
+
+        Process process = new Process();
+        process.StartInfo = processInfo;
+        process.Start();
+        process.WaitForExit();
+
+        if (process.ExitCode == 0)
+        {
+            LogGitOutput(process);
+        }
+        else
+        {
+            LogGitOutput(process);
+        }
+    }
+
     //function that will help return the terminal output to the log
     private void LogGitOutput(Process process)
     {
@@ -33,54 +60,14 @@ public class UpdateAssets : MonoBehaviour
     //function that will add changed files
     public void ExecuteGitAdd()
     {
-    string gitExecutable = "git"; //path to the git executable
-    string repositoryPath = Application.dataPath; //path to the gitRepo
-
-    ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-        processInfo.WorkingDirectory = repositoryPath;
-        processInfo.Arguments = "add ."; // Add all files to the Git repository
-        processInfo.RedirectStandardOutput = true;
-        processInfo.UseShellExecute = false;
-
-        Process process = new Process();
-        process.StartInfo = processInfo;
-        process.Start();
-        process.WaitForExit();
-
-        LogGitOutput(process);
+        ExecuteGitCommand("add .");
     }
 
     //function that will push all added files to the server with a comment
     public void ExecuteGitPush(string commitComment)
     {
-        string gitExecutable = "git"; //path to the git executable
-        string repositoryPath = Application.dataPath; //path to the gitRepo
-
-        ProcessStartInfo commitProcessInfo = new ProcessStartInfo(gitExecutable);
-        commitProcessInfo.WorkingDirectory = repositoryPath;
-        commitProcessInfo.Arguments = "commit -m \"" + commitComment + "\""; // Use the comment as the commit message
-        commitProcessInfo.RedirectStandardOutput = true;
-        commitProcessInfo.UseShellExecute = false;
-
-        Process commitProcess = new Process();
-        commitProcess.StartInfo = commitProcessInfo;
-        commitProcess.Start();
-        commitProcess.WaitForExit();
-
-        LogGitOutput(commitProcess);
-
-        ProcessStartInfo pushProcessInfo = new ProcessStartInfo(gitExecutable);
-        pushProcessInfo.WorkingDirectory = repositoryPath;
-        pushProcessInfo.Arguments = "push";
-        pushProcessInfo.RedirectStandardOutput = true;
-        pushProcessInfo.UseShellExecute = false;
-
-        Process pushProcess = new Process();
-        pushProcess.StartInfo = pushProcessInfo;
-        pushProcess.Start();
-        pushProcess.WaitForExit();
-
-        LogGitOutput(pushProcess);
+        ExecuteGitCommand("commit -m \"" + commitComment + "\"");
+        ExecuteGitCommand("push");
     }
 
     //pull command that will restore deleted things
@@ -107,9 +94,10 @@ public class UpdateAssets : MonoBehaviour
     {
         string gitExecutable = "git"; //path to the git executable
         string repositoryPath = Application.dataPath; //path to the gitRepo
+
         ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
             processInfo.WorkingDirectory = repositoryPath;
-            processInfo.Arguments = "fetch --all; git reset --hard origin/master"; // Fetch all changes and overwrite local files
+            processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
 
             Process process = new Process();
             process.StartInfo = processInfo;
@@ -117,7 +105,17 @@ public class UpdateAssets : MonoBehaviour
             process.WaitForExit();
 
             LogGitOutput(process);
-        }
+        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        processInfo.WorkingDirectory = repositoryPath;
+        processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
+
+        Process process = new Process();
+        process.StartInfo = processInfo;
+        process.Start();
+        process.WaitForExit();
+
+        LogGitOutput(process);
+    }
 
         // Fetch all
 
