@@ -16,11 +16,14 @@ public class CustomEditorButton : Editor
         DrawDefaultInspector();
 
         UpdateAssets scriptToDo = (UpdateAssets)target;
-
-        if (GUILayout.Button("Push to GitHub"))
+        if (GUILayout.Button("Add"))
+        {
+            scriptToDo.ExecuteGitAdd();
+        }
+        if (GUILayout.Button("Push"))
         {
             UpdateAssets script = (UpdateAssets)target;
-            script.AddAndPushAssets(textField.stringValue);
+            scriptToDo.ExecuteGitPush(textField.stringValue);
          
         }
         if (GUILayout.Button("Pull from GitHub"))
