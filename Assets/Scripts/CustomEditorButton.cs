@@ -26,9 +26,13 @@ public class CustomEditorButton : Editor
             scriptToDo.ExecuteGitPush(textField.stringValue);
          
         }
-        if (GUILayout.Button("Pull from GitHub"))
+        if (GUILayout.Button("Force pull (restore deleted)"))
         {
-            scriptToDo.PerformGitPull();
+            scriptToDo.ExecuteGitPullRestoreDeleted();
+        }
+        if (GUILayout.Button("Pull overwrite existing"))
+        {
+            scriptToDo.ExecuteGitPullOverwriteExisting();
         }
 
         serializedObject.Update();
