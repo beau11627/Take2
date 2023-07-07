@@ -35,6 +35,18 @@ public class CustomEditorField : Editor
             scriptToDo.ExecuteGitPullOverwriteExisting();
         }
 
+        serializedObject.Update();
+
+        DrawDefaultInspector();
+
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Custom Section", EditorStyles.boldLabel);
+
+        EditorGUILayout.PropertyField(textField);
+
+
+        serializedObject.ApplyModifiedProperties();
     }
 
 }
