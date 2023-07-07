@@ -6,12 +6,14 @@ using UnityEditor;
 public class CustomEditorLayout : Editor
 {
     private SerializedProperty textField;
+    private SerializedProperty branch;
     private bool restoreDeleted;
     private bool overwriteExistingFiles;
 
     private void OnEnable()
     {
         textField = serializedObject.FindProperty("commitComment"); // Replace with the name of your serialized string field
+        branch = serializedObject.FindProperty("branch");
     }
     public override void OnInspectorGUI()
     {
@@ -25,7 +27,7 @@ public class CustomEditorLayout : Editor
         if (GUILayout.Button("Push"))
         {
             UpdateAssets script = (UpdateAssets)target;
-            scriptToDo.ExecuteGitPush(textField.stringValue);
+            scriptToDo.ExecuteGitPush(textField.stringValue, textField.stringValue);
          
         }
         if (GUILayout.Button("Pull"))
@@ -40,9 +42,9 @@ public class CustomEditorLayout : Editor
             }
             
         }
-        if (GUILayout.Button("Pull overwrite existing"))
+        if (GUILayout.Button("Stash"))
         {
-            scriptToDo.ExecuteGitPullOverwriteExisting();
+            scriptToDo.Stash();
         }
 
         restoreDeleted = GUILayout.Toggle(restoreDeleted, "Restore deleted files when pulling");
