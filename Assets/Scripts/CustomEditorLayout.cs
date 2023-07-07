@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 [CustomEditor(typeof(UpdateAssets))]
-public class CustomEditorField : Editor
+public class CustomEditorLayout : Editor
 {
     private SerializedProperty textField;
 
@@ -35,18 +35,18 @@ public class CustomEditorField : Editor
             scriptToDo.ExecuteGitPullOverwriteExisting();
         }
 
-        serializedObject.Update();
+        //serializedObject.Update();
 
-        DrawDefaultInspector();
+        //DrawDefaultInspector();
 
-        EditorGUILayout.Space();
+        //EditorGUILayout.Space();
 
-        EditorGUILayout.LabelField("Custom Section", EditorStyles.boldLabel);
+        //EditorGUILayout.LabelField("Custom Section", EditorStyles.boldLabel);
 
-        EditorGUILayout.PropertyField(textField);
+        //EditorGUILayout.PropertyField(textField);
 
 
-        serializedObject.ApplyModifiedProperties();
+        //serializedObject.ApplyModifiedProperties();
     }
 
 }

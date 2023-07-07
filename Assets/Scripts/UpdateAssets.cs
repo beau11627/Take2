@@ -12,10 +12,6 @@ public class UpdateAssets : MonoBehaviour
 
     [SerializeField] private string commitComment; //string that will hold our inputted comment
 
-
-
-    
-
     //General function for calling GitCommands
     private void ExecuteGitCommand(string command)
     {
@@ -43,6 +39,10 @@ public class UpdateAssets : MonoBehaviour
     //function that will help return the terminal output to the log
     private void LogGitOutput(Process process)
     {
+        process.StartInfo.RedirectStandardOutput = true;
+        process.StartInfo.UseShellExecute = false;  // Set UseShellExecute to false for IO stream redirection
+        process.Start();  // Start the process after configuring the properties
+
         StringBuilder output = new StringBuilder();
 
         while (!process.StandardOutput.EndOfStream)
