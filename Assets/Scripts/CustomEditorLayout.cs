@@ -46,6 +46,7 @@ public class CustomEditorLayout : Editor
         }
 
         restoreDeleted = GUILayout.Toggle(restoreDeleted, "Restore deleted files when pulling");
+        overwriteExistingFiles = GUILayout.Toggle(restoreDeleted, "Restore deleted files when pulling");
 
     }
 
