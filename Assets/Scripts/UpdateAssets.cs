@@ -80,29 +80,9 @@ public class UpdateAssets : MonoBehaviour
 
     public void ExecuteGitPullOverwriteExisting()
     {
-        //string gitExecutable = "git"; //path to the git executable
-        //string repositoryPath = Application.dataPath; //path to the gitRepo
-
-        //ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-        //    processInfo.WorkingDirectory = repositoryPath;
-        //    processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
-
-        //    Process process = new Process();
-        //    process.StartInfo = processInfo;
-        //    process.Start();
-        //    process.WaitForExit();
-
-        //    LogGitOutput(process);
-        //ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-        //processInfo.WorkingDirectory = repositoryPath;
-        //processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
-
-        //Process process = new Process();
-        //process.StartInfo = processInfo;
-        //process.Start();
-        //process.WaitForExit();
-
-        //LogGitOutput(process);
+        ExecuteGitCommand("stash");
+        ExecuteGitCommand("pull");
+        ExecuteGitCommand("stash apply");
     }
 
         // Fetch all

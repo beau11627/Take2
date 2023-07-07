@@ -6,6 +6,8 @@ using UnityEditor;
 public class CustomEditorLayout : Editor
 {
     private SerializedProperty textField;
+    private bool restoreDeleted;
+    private bool overwriteExistingFiles;
 
     private void OnEnable()
     {
@@ -26,27 +28,25 @@ public class CustomEditorLayout : Editor
             scriptToDo.ExecuteGitPush(textField.stringValue);
          
         }
-        if (GUILayout.Button("Force pull (restore deleted)"))
+        if (GUILayout.Button("Pull"))
         {
-            scriptToDo.ExecuteGitPullRestoreDeleted();
+            if (restoreDeleted)
+            {
+                scriptToDo.ExecuteGitPullRestoreDeleted();
+            }
+            if (overwriteExistingFiles)
+            {
+                scriptToDo.ExecuteGitPullOverwriteExisting();
+            }
+            
         }
         if (GUILayout.Button("Pull overwrite existing"))
         {
             scriptToDo.ExecuteGitPullOverwriteExisting();
         }
 
-        //serializedObject.Update();
+        restoreDeleted = GUILayout.Toggle(restoreDeleted, "Restore deleted files when pulling");
 
-        //DrawDefaultInspector();
-
-        //EditorGUILayout.Space();
-
-        //EditorGUILayout.LabelField("Custom Section", EditorStyles.boldLabel);
-
-        //EditorGUILayout.PropertyField(textField);
-
-
-        //serializedObject.ApplyModifiedProperties();
     }
 
 }
