@@ -68,7 +68,7 @@ public class UpdateAssets : MonoBehaviour
     public void ExecuteGitPush(string commitComment, string branch)
     {
         ExecuteGitCommand("commit -m \"" + commitComment + "\"");
-        ExecuteGitCommand("push origin \"" + branch + "\"");
+        ExecuteGitCommand("push \"" + branch + "\"");
     }
 
     //pull command that will restore deleted things

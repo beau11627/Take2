@@ -27,7 +27,7 @@ public class CustomEditorLayout : Editor
         if (GUILayout.Button("Push"))
         {
             UpdateAssets script = (UpdateAssets)target;
-            scriptToDo.ExecuteGitPush(textField.stringValue, textField.stringValue);
+            scriptToDo.ExecuteGitPush(textField.stringValue, branch.stringValue);
          
         }
         if (GUILayout.Button("Pull"))
