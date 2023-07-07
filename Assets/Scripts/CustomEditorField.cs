@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 [CustomEditor(typeof(UpdateAssets))]
-public class CustomEditorButton : Editor
+public class CustomEditorField : Editor
 {
     private SerializedProperty textField;
 
@@ -35,18 +35,6 @@ public class CustomEditorButton : Editor
             scriptToDo.ExecuteGitPullOverwriteExisting();
         }
 
-        serializedObject.Update();
-
-        DrawDefaultInspector();
-
-        EditorGUILayout.Space();
-
-        EditorGUILayout.LabelField("Custom Section", EditorStyles.boldLabel);
-
-        EditorGUILayout.PropertyField(textField);
-
-
-        serializedObject.ApplyModifiedProperties();
     }
 
 }

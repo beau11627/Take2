@@ -73,48 +73,36 @@ public class UpdateAssets : MonoBehaviour
     //pull command that will restore deleted things
     public void ExecuteGitPullRestoreDeleted()
     {
-        string gitExecutable = "git"; //path to the git executable
-        string repositoryPath = Application.dataPath; //path to the gitRepo
-
-        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-        processInfo.WorkingDirectory = repositoryPath;
-        processInfo.Arguments = "pull --force"; // Pull and overwrite local changes, restoring deleted files
-        processInfo.RedirectStandardOutput = true;
-        processInfo.UseShellExecute = false;
-
-        Process process = new Process();
-        process.StartInfo = processInfo;
-        process.Start();
-        process.WaitForExit();
-
-        LogGitOutput(process);
+        ExecuteGitCommand("fetch");
+        ExecuteGitCommand("reset --hard HEAD");
+        ExecuteGitCommand("merge '@{u}'");
     }
 
     public void ExecuteGitPullOverwriteExisting()
     {
-        string gitExecutable = "git"; //path to the git executable
-        string repositoryPath = Application.dataPath; //path to the gitRepo
+        //string gitExecutable = "git"; //path to the git executable
+        //string repositoryPath = Application.dataPath; //path to the gitRepo
 
-        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-            processInfo.WorkingDirectory = repositoryPath;
-            processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
+        //ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        //    processInfo.WorkingDirectory = repositoryPath;
+        //    processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
 
-            Process process = new Process();
-            process.StartInfo = processInfo;
-            process.Start();
-            process.WaitForExit();
+        //    Process process = new Process();
+        //    process.StartInfo = processInfo;
+        //    process.Start();
+        //    process.WaitForExit();
 
-            LogGitOutput(process);
-        ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
-        processInfo.WorkingDirectory = repositoryPath;
-        processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
+        //    LogGitOutput(process);
+        //ProcessStartInfo processInfo = new ProcessStartInfo(gitExecutable);
+        //processInfo.WorkingDirectory = repositoryPath;
+        //processInfo.Arguments = "fetch"; // Fetch all changes and overwrite local files
 
-        Process process = new Process();
-        process.StartInfo = processInfo;
-        process.Start();
-        process.WaitForExit();
+        //Process process = new Process();
+        //process.StartInfo = processInfo;
+        //process.Start();
+        //process.WaitForExit();
 
-        LogGitOutput(process);
+        //LogGitOutput(process);
     }
 
         // Fetch all
