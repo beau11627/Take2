@@ -65,7 +65,7 @@ public class UpdateAssets : MonoBehaviour
     }
 
     //function that will push all added files to the server with a comment
-    public void ExecuteGitPush(string commitComment, string branch)
+    public void ExecuteGitPush(string commitComment)
     {
         ExecuteGitCommand("commit -m \"" + commitComment + "\"");
         ExecuteGitCommand("push");
